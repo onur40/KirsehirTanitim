@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kırşehir: Bozkırın Tezenesi, Medeniyetin Beşiği</title>
+    <meta name="description" content="Kırşehir'in tarihi, kültürü ve doğal güzelliklerini keşfedin. Ahi Evran diyarında bir yolculuğa çıkın.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-header">
+        <div class="container nav-content">
+            <a href="#" class="logo">Kırşehir<span>Tanıtım</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#discover">Keşfet</a></li>
+                <li><a href="#places">Gezilecek Yerler</a></li>
+                <li><a href="#kitchen">Mutfak</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="reveal-text">Bozkırın Kalbi <br><span>Kırşehir</span></h1>
+            <p class="reveal-text-delay">Ahi Evran'ın hoşgörüsü, Neşet Ertaş'ın tınısıyla harmanlanmış bir Anadolu masalı.</p>
+            <div class="cta-buttons">
+                <a href="#discover" class="btn btn-primary">Keşfetmeye Başla</a>
+                <a href="#places" class="btn btn-outline">Yerleri Gör</a>
+            </div>
+
+            <!-- Modern Search Interface -->
+            <div class="search-box-wrapper reveal-text-delay">
+                <div class="search-box">
+                    <i class="fas fa-search search-main-icon"></i>
+                    <input type="text" id="text-search" placeholder="İstediğiniz bir yer veya kategori yazın...">
+                    <label for="visual-search-input" class="visual-search-btn" title="Görselle Ara (Yapay Zeka)">
+                        <i class="fas fa-camera"></i>
+                    </label>
+                    <input type="file" id="visual-search-input" accept="image/*" style="display: none;">
+                    <div id="ai-model-status" class="ai-status-indicator" title="Model Yükleniyor...">
+                        <div class="status-dot pulsing"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover Section -->
+    <section id="discover" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tarih ve Kültür</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="grid discover-grid">
+                <div class="card glass-card reveal">
+                    <i class="fas fa-hand-holding-heart i-gold"></i>
+                    <h3>Ahilik Teşkilatı</h3>
+                    <p>Ahi Evran-ı Veli tarafından Kırşehir'de kurulan, ahlak ve ticaretin buluşma noktası.</p>
+                </div>
+                <div class="card glass-card reveal">
+                    <i class="fas fa-music i-gold"></i>
+                    <h3>UNESCO Müzik Şehri</h3>
+                    <p>Neşet Ertaş ve daha nice ozanıyla Anadolu'nun sesini dünyaya duyuran müzik diyarı.</p>
+                </div>
+                <div class="card glass-card reveal">
+                    <i class="fas fa-landmark i-gold"></i>
+                    <h3>Tarihi Miras</h3>
+                    <p>Cacabey Medresesi'nden Mucur Yeraltı Şehri'ne, binlerce yıllık birikim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places to Visit -->
+    <section id="places" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gezilecek Yerler</h2>
+                <div class="underline"></div>
+            </div>
+            <div id="no-results" class="no-results" style="display: none;">
+                <i class="fas fa-search-minus"></i>
+                <p>Aradığınız kriterlere uygun bir yer bulunamadı.</p>
+            </div>
+
+            <div class="grid places-grid" id="places-container">
+                <!-- 1. Cacabey Medresesi -->
+                <article class="place-card reveal" data-tags="cami medrese astronomi tarih selçuklu">
+                    <div class="img-container">
+                        <img src="resimler/cacabeyMedresesi.jpeg" alt="Cacabey Medresesi">
+                        <div class="place-tag">Astronomi</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Cacabey Medresesi</h3>
+                        <p>13. Yüzyılda Anadolu Selçuklu döneminde Emir Nurettin Cibril bin Caca tarafından yaptırılmıştır. Hem medrese hem de rasathane olarak kullanılan yapı, özellikle astronomi eğitimi ile öne çıkmıştır. Kesme taştan yapılan mimarisi, yüksek taç kapısı ve minaresiyle Selçuklu sanatının eşsiz bir örneğidir.</p>
+                    </div>
+                </article>
+
+                <!-- 2. Kalehöyük Japon Bahçesi -->
+                <article class="place-card reveal" data-tags="doğa bahçe japon kaman arkeoloji park">
+                    <div class="img-container">
+                        <img src="resimler/kalehoyuk.jpeg" alt="Kalehöyük Japon Bahçesi">
+                        <div class="place-tag">Doğa & Kültür</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Kalehöyük Japon Bahçesi</h3>
+                        <p>Kaman'da yer alan ve M.Ö. 3000'e kadar uzanan bir geçmişe sahip olan bu alan, Türk-Japon dostluğunu simgelemek amacıyla yapılmıştır. Orta Doğu Teknik Üniversitesi ve Japon Anadolu Arkeoloji Enstitüsü iş birliğiyle yürütülen kazıların meyvesi olan bu bahçe, huzur verici peyzajıyla dikkat çeker.</p>
+                    </div>
+                </article>
+
+                <!-- 3. Ahi Evran Camii -->
+                <article class="place-card reveal" data-tags="cami türbe ahilik inanç selçuklu">
+                    <div class="img-container">
+                        <img src="resimler/ahievrancamii.jpeg" alt="Ahi Evran Camii">
+                        <div class="place-tag">İnanç</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Ahi Evran Camii</h3>
+                        <p>13. yüzyılda Ahilik teşkilatının kurucusu Ahi Evran adına yaptırılmış önemli bir Selçuklu eseridir. Caminin yanında Ahi Evran'ın türbesi bulunur ve yapı, Ahilik kültürünün manevi merkezi olarak kabul edilir. Tarihi dokusuyla Anadolu'nun en kıymetli yapılarından biridir.</p>
+                    </div>
+                </article>
+
+                <!-- 4. Kırşehir Ahilik Müzesi -->
+                <article class="place-card reveal" data-tags="müze ahilik kültür tarih sergi">
+                    <div class="img-container">
+                        <img src="resimler/kirsehirAhilikMuzesi.jpeg" alt="Kırşehir Ahilik Müzesi">
+                        <div class="place-tag">Müze</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Kırşehir Ahilik Müzesi</h3>
+                        <p>Ahi Evran Külliyesi içinde yer alan modern bir müzedir. Ahilik teşkilatının tarihini eserler, canlandırmalar ve dijital sunumlarla anlatan müze, bu köklü geleneği geçmişten günümüze taşıyan önemli bir kültür durağıdır.</p>
+                    </div>
+                </article>
+
+                <!-- 5. Ahi Evran Külliyesi -->
+                <article class="place-card reveal" data-tags="külliye cami ahilik tarih eğitim">
+                    <div class="img-container">
+                        <img src="resimler/ahievrankulliyesi.jpeg" alt="Ahi Evran Külliyesi">
+                        <div class="place-tag">Külliye</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Ahi Evran Külliyesi</h3>
+                        <p>Cami, türbe ve müzeden oluşan bu yapılar topluluğu, sadece dini bir merkez değil, aynı zamanda esnaf dayanışması ve meslek ahlakını öğreten Ahilik kültürünün merkezidir. 13. yüzyıl ruhunu yaşatan bu külliye, Kırşehir'in kalbidir.</p>
+                    </div>
+                </article>
+
+                <!-- 6. Üçayak Kilisesi -->
+                <article class="place-card reveal" data-tags="kilise bizans antik tarih harabe">
+                    <div class="img-container">
+                        <img src="resimler/ucayakkilisesi.jpeg" alt="Üçayak Kilisesi">
+                        <div class="place-tag">Bizans Mirası</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Üçayak Kilisesi</h3>
+                        <p>Taburoğlu köyü yakınlarında bulunan, 10-11. yüzyıl Bizans dönemine ait olduğu tahmin edilen tuğladan inşa edilmiş çift kiliseli bir yapıdır. 1938 depreminde kubbeleri yıkılsa da görkemli beden duvarları hâlâ zamana meydan okumaktadır.</p>
+                    </div>
+                </article>
+
+                <!-- 7. Kesikköprü Hanı -->
+                <article class="place-card reveal" data-tags="han kervansaray ipek yolu tarih">
+                    <div class="img-container">
+                        <img src="resimler/kesikkopruHani.jpeg" alt="Kesikköprü Hanı">
+                        <div class="place-tag">İpek Yolu</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Kesikköprü Hanı</h3>
+                        <p>Selçuklu döneminde kervanların konaklaması ve güvenliği için inşa edilmiş dikdörtgen planlı bir kervansaraydır. Selçuklu taş işçiliğinin en güzel örneklerinden birini sunan yapı, tarih boyunca ticaret yollarının en güvenli limanlarından biri olmuştur.</p>
+                    </div>
+                </article>
+
+                <!-- 8. Kesikköprü Köprüsü -->
+                <article class="place-card reveal" data-tags="köprü selçuklu tarih ulaşım nehir">
+                    <div class="img-container">
+                        <img src="resimler/kesikKopruKoprusu.jpeg" alt="Kesikköprü Köprüsü">
+                        <div class="place-tag">Mühendislik</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Kesikköprü Köprüsü</h3>
+                        <p>13. yüzyıl yapımı olan bu tarihi köprü, kervanlar için bölgedeki can damarı olan bir ulaşım geçidi sağlamıştır. Kemer sistemiyle dayanıklılık kazanan bu taş yapı, Selçuklu mühendisliğinin kudretini günümüze taşımaktadır.</p>
+                    </div>
+                </article>
+
+                <!-- 9. Hılla Gölü -->
+                <article class="place-card reveal" data-tags="göl doğa nilüfer park manzara">
+                    <div class="img-container">
+                        <img src="resimler/hillaGolu.jpeg" alt="Hılla Gölü">
+                        <div class="place-tag">Doğa</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Hılla Gölü</h3>
+                        <p>Çukurçayır mahallesi çevresinde bulunan bu doğa harikası, nilüfer çiçekleri ve zengin su altı bitki örtüsüyle dikkat çeker. Kırşehir'in huzurlu duraklarından biri olan bu küçük göl, her mevsim farklı bir güzellik sunar.</p>
+                    </div>
+                </article>
+
+                <!-- 10. Hamidiye Camii -->
+                <article class="place-card reveal" data-tags="cami ibadet estetik modern cennet">
+                    <div class="img-container">
+                        <img src="resimler/HamidiyeCamii.jpeg" alt="Hamidiye Camii">
+                        <div class="place-tag">Mimari Estetik</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Hamidiye Camii</h3>
+                        <p>İç mekanındaki estetik tasarımlarıyla "Cennete benzeyen cami" olarak anılır. Selçuklu ve Osmanlı estetiğinin modern dokunuşlarla birleştirildiği bu yapı, hem ibadet hem de görsel şölen sunan eşsiz bir duraktır.</p>
+                    </div>
+                </article>
+
+                <!-- 11. Neşet Ertaş Kültür Bahçesi -->
+                <article class="place-card reveal" data-tags="müzik ozan bahçe kültür sanat park">
+                    <div class="img-container">
+                        <img src="resimler/NesetertasKulturBahcesi.jpeg" alt="Neşet Ertaş Kültür Bahçesi">
+                        <div class="place-tag">Müzik & Sanat</div>
+                    </div>
+                    <div class="place-info">
+                        <h3>Neşet Ertaş Kültür Bahçesi</h3>
+                        <p>Halk müziğinin efsanesi Neşet Ertaş'ın anısını yaşatmak için tasarlanmıştır. Sanatçının yaşam felsefesini yansıtan bahçede, çocukluk evinin bir minyatürü, dünyanın dört bir yanından getirilen çiçekler ve sanatçının ezgileriyle dolu bir dinlenme alanı bulunur.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gastronomy Section -->
+    <section id="kitchen" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kırşehir Mutfağı</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="gastronomy-layout">
+                 <!-- Featured image left, text right -->
+                 <div class="gastro-feature reveal">
+                    <div class="gastro-image">
+                        <img src="resimler/mutfak.jpeg" alt="Kırşehir Çullaması">
+                    </div>
+                    <div class="gastro-content">
+                        <h3>Lezzet Durakları</h3>
+                        <p>Kırşehir, Orta Anadolu'nun en zengin mutfak kültürlerinden birine sahiptir. Bozkırın doğal ürünleriyle hazırlanan bu lezzetler, asırlık tariflerle günümüze ulaşmıştır.</p>
+                        <div class="food-grid">
+                            <div class="food-item">
+                                <strong>Kırşehir Çullaması:</strong> Un ve tavuk etiyle hazırlanan, üzerine tereyağı gezdirilen eşsiz bir ana yemek.
+                            </div>
+                            <div class="food-item">
+                                <strong>Madımak:</strong> Bahar aylarında doğadan toplanan madımak otunun bulgur ve pastırma ile muhteşem uyumu.
+                            </div>
+                            <div class="food-item">
+                                <strong>Besmeç:</strong> Kıyma ve bulgurla hazırlanan, Kırşehir'e özgü enfes bir köfte çeşidi.
+                            </div>
+                            <div class="food-item">
+                                <strong>Pekmezli Pelte:</strong> Kırşehir üzümlerinden elde edilen pekmezle yapılan hafif ve doğal bir tatlı.
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kırşehir<span>Tanıtım</span></h3>
+                    <p>Bu proje Kırşehir'in kültürel mirasını ve tarihi zenginliklerini gelecek nesillere tanıtmak amacıyla hazırlanmış bir proje ödevidir.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Menü</h4>
+                    <ul>
+                        <li><a href="#home">Başlangıç</a></li>
+                        <li><a href="#discover">Tarih</a></li>
+                        <li><a href="#places">Gezilecek Yerler</a></li>
+                        <li><a href="#kitchen">Gastronomi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Konum</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Kırşehir, Türkiye</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kırşehir Tanıtım Projesi. Bozkırın Kalbinde Bir Yolculuk.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Visual Search Modal -->
+    <div id="ai-search-modal" class="ai-modal">
+        <div class="ai-modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="ai-modal-header">
+                <h3>Yapay Zeka Görsel Analizi</h3>
+            </div>
+            <div class="ai-preview-box">
+                <img id="ai-image-preview" src="" alt="Önizleme">
+                <div class="scanning-overlay">
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+            <div class="ai-result-box">
+                <p id="ai-status-text">Analiz ediliyor...</p>
+                <div id="ai-detected-labels" class="ai-label-chips"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TensorFlow.js Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>

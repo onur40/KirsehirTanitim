@@ -1,0 +1,13 @@
+{
+  "name": "kirsehir-tanitim",
+  "version": "1.0.0",
+  "description": "Kırşehir Tanıtım Web Sitesi",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
